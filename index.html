@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAYANOVA FEST</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-logo">MAYANOVA FEST</div>
+  <div class="navbar-links">
+    <a href="#inicio">Inicio</a>
+    <a href="#djs">DJs</a>
+    <a href="#galeria">Galería</a>
+    <a href="#ubicacion">Ubicación</a>
+    <a href="#faq">FAQ</a>
+    <a href="#tickets">Tickets</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="inicio">
+  <div class="hero-content">
+    <h1 class="hero-title">MAYANOVA FEST</h1>
+    <p class="hero-subtitle">UN RITUAL ELECTRÓNICO ANCESTRAL: LUCES, RITMOS INDUSTRIALES Y ATMÓSFERAS MÍSTICAS EN UNA SOLA NOCHE.</p>
+    <p class="hero-date">19 de diciembre de 2025 · 20h00<br><span class="hero-location">Quito, Ecuador</span></p>
+    <a class="btn-primary" href="https://wa.me/593992758943?text=Hola%20quiero%20comprar%20mi%20entrada">Comprar entrada</a>
+  </div>
+</header>
+
+<!-- LINEUP -->
+<section class="section" id="djs">
+<h2 class="section-title">Lineup</h2>
+
+<div class="lineup-grid">
+
+  <article class="dj-card">
+    <img src="img/dabit_ortiz_poster.png" class="dj-full zoomable">
+    <div class="dj-card-body">
+      <p class="dj-card-ig">Instagram: <a href="https://www.instagram.com/dabitortiz">@dabitortiz</a></p>
+    </div>
+  </article>
+
+  <article class="dj-card">
+    <img src="img/dj_tkresh.jpg" class="dj-full zoomable">
+    <div class="dj-card-body">
+      <!-- Sin Instagram -->
+    </div>
+  </article>
+
+  <article class="dj-card">
+    <img src="img/dj_ava.jpg" class="dj-full zoomable">
+    <div class="dj-card-body">
+      <!-- Sin Instagram -->
+    </div>
+  </article>
+
+  <article class="dj-card more-djs-card">
+    <div class="more-djs-inner">
+      <h3 class="more-djs-title">More DJs coming soon</h3>
+      <p class="more-djs-text">Pronto anunciaremos más artistas invitados.</p>
+    </div>
+  </article>
+
+</div>
+</section>
+
+<!-- GALLERY -->
+<section class="section" id="galeria">
+<h2 class="section-title">Galería</h2>
+<div class="gallery-grid">
+  <div class="gallery-item"></div>
+  <div class="gallery-item"></div>
+  <div class="gallery-item"></div>
+  <div class="gallery-item"></div>
+</div>
+</section>
+
+<!-- MAP -->
+<section class="section" id="ubicacion">
+<h2 class="section-title">Ubicación</h2>
+<div class="map-wrapper">
+<iframe src="https://www.google.com/maps?q=-0.109932,-78.462129&output=embed"></iframe>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+<h2 class="section-title">Preguntas frecuentes</h2>
+
+<div class="faq-item">
+  <div class="faq-q">¿Desde qué edad puedo ingresar?</div>
+  <div class="faq-a">El evento es exclusivo para mayores de 18 años. Se requiere cédula.</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">¿Qué no está permitido?</div>
+  <div class="faq-a">Está prohibido el ingreso de bebidas alcohólicas, armas u objetos peligrosos.</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">¿Métodos de pago?</div>
+  <div class="faq-a">Transferencia bancaria y puntos de venta físicos. Toda entrada es digital.</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">¿Puedo reembolsar mi entrada?</div>
+  <div class="faq-a">No se realizan reembolsos.</div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-q">¿Qué música escucharé?</div>
+  <div class="faq-a">Hard · Industrial · Psy House · Techno · Beat Room</div>
+</div>
+
+</section>
+
+<!-- TICKETS -->
+<section class="section" id="tickets">
+<h2 class="section-title">Tickets</h2>
+<p class="section-subtitle">Nuestro equipo te guiará durante todo el proceso por WhatsApp.</p>
+<a class="btn-primary" href="https://wa.me/593992758943?text=Hola%20quiero%20comprar%20mi%20entrada">Comprar entrada</a>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="imgLightbox" class="lightbox">
+  <div class="lightbox-content">
+    <img id="lightboxImg" src="">
+  </div>
+</div>
+
+<footer>
+MAYANOVA FEST · 2025 · Instagram: <a href="https://www.instagram.com/mayanovafest">@mayanovafest</a>
+</footer>
+
+<script>
+document.querySelectorAll("img.zoomable").forEach(img=>{
+  img.onclick=()=>{
+    document.getElementById("lightboxImg").src=img.src;
+    document.getElementById("imgLightbox").classList.add("active");
+  };
+});
+document.getElementById("imgLightbox").onclick=()=>{
+  document.getElementById("imgLightbox").classList.remove("active");
+};
+</script>
+
+</body>
+</html>
