@@ -188,12 +188,14 @@ header {
   width: 100%;
   aspect-ratio: 3 / 4;
   overflow: hidden;
+  position: relative;
 }
 
 .dj-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
   transition: transform 0.4s ease;
 }
