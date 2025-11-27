@@ -195,25 +195,34 @@
         lightboxImg.src = "";
       });
     });
-  </script>
-<script>document.addEventListener("DOMContentLoaded", function () {
-  const lineup = document.querySelector(".lineup-grid");
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var lineup = document.querySelector(".lineup-grid");
   if (!lineup) return;
 
   lineup.style.scrollBehavior = "smooth";
 
-  let direction = 1;
-  let paused = false;
+  var direction = 1;
+  var paused = false;
 
-  lineup.addEventListener("mouseover", () => { paused = true; });
-  lineup.addEventListener("mouseout", () => { paused = false; });
+  // Pausa cuando el mouse está sobre la sección de DJs (PC)
+  lineup.addEventListener("mouseenter", function () {
+    paused = true;
+  });
+
+  lineup.addEventListener("mouseleave", function () {
+    paused = false;
+  });
 
   setInterval(function () {
     if (paused) return;
-    lineup.scrollLeft += 1.5 * direction;
+
+    lineup.scrollLeft += 2 * direction;
+
     if (lineup.scrollLeft + lineup.clientWidth >= lineup.scrollWidth || lineup.scrollLeft <= 0) {
-      direction *= -1;
+      direction = -direction;
     }
   }, 30);
-});</script></body>
+});
+</script></body>
 </html>
