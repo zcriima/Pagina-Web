@@ -48,13 +48,14 @@
 <div class="dj-card-body">
 <h3 class="dj-name">DABIT ORTIZ</h3>
 <p class="dj-desc">
-         Set cargado de hard techno e influencias industriales, donde ritmos pesados, atmósferas densas y una energía inquebrantable transforman la pista en un trance ritual. Un viaje sonoro directo y contundente, perfecto para los momentos más intensos de la noche.          </p>
+            DJ y selector con enfoque en sonidos intensos y cargados de energía, perfecto para los momentos más pesados de la noche.
+          </p>
 <p class="dj-ig">
             Instagram:
             <a href="https://www.instagram.com/dabitortiz" rel="noopener" target="_blank">@dabitortiz</a>
 </p>
 </div>
-</article><article class="dj-card"><div class="dj-card-image-wrapper"><img class="dj-image" src="img/dj_charlie.jpg"/></div><div class="dj-card-body"><h3>CHARLIE BROWN</h3><p>Propone un viaje sonoro profundo y ceremonial, donde capas cálidas se entrelazan con pulsos hipnóticos y texturas siderales que despiertan la memoria ancestral. Su set fluye como un ritual, guiando a la audiencia hacia un estado de conexión expansiva, elevando cuerpo, mente y espíritu hacia una resonancia espiritual.</p></div></article>
+</article><article class="dj-card"><div class="dj-card-image-wrapper"><img class="dj-image" src="img/dj_charlie.jpg"/></div><div class="dj-card-body"><h3 class="dj-name">CHARLIE BROWN</h3><p class="dj-desc">Charlie Brown propone un viaje sonoro profundo y ceremonial, donde capas cálidas se entrelazan con pulsos hipnóticos y texturas siderales que despiertan la memoria ancestral. Su set fluye como un ritual, guiando a la audiencia hacia un estado de conexión expansiva, elevando cuerpo, mente y espíritu hacia una resonancia espiritual.</p></div></article>
 <article class="dj-card">
 <div class="dj-card-image-wrapper">
 <img alt="TKRESH - MAYANOVA FEST" class="dj-image zoomable" src="img/dj_tkresh.jpg"/>
@@ -62,7 +63,8 @@
 <div class="dj-card-body">
 <h3 class="dj-name">TKRESH</h3>
 <p class="dj-desc">
-                        Propone una selección profunda y envolvente donde capas cálidas, pulsos hipnóticos y texturas etéreas construyen un ambiente introspectivo. Un set que fluye con naturalidad y sumerge a la audiencia en un estado de conexión progresiva.              </p>
+            Propuesta centrada en atmósferas densas, texturas experimentales y ritmos hipnóticos para sumergir a la pista en un viaje profundo.
+          </p>
 </div>
 </article>
 <article class="dj-card">
@@ -76,11 +78,12 @@
           </p>
 </div>
 </article>
-<article class="dj-card"><div class="dj-card-image-wrapper"><img class="dj-image" src="img/dj_gama.jpg"/></div><div class="dj-card-body"><h3>GAMA</h3><p>Desata un viaje sonoro cargado de energía ritual, donde ondas cálidas chocan con pulsos hipnóticos y texturas luminosas que despiertan la fuerza ancestral. Un set que avanza con poder, elevando a la audiencia hacia una conexión expansiva, encendiendo el cuerpo, la mente y el espíritu en una misma vibración.</p></div></article><article class="dj-card more-djs-card">
+<article class="dj-card"><div class="dj-card-image-wrapper"><img class="dj-image" src="img/dj_gama.jpg"/></div><div class="dj-card-body"><h3 class="dj-name">GAMA</h3><p class="dj-desc">Desata un viaje sonoro cargado de energía ritual, donde ondas cálidas chocan con pulsos hipnóticos y texturas luminosas que despiertan la fuerza ancestral. Un set que avanza con poder, elevando a la audiencia hacia una conexión expansiva, encendiendo el cuerpo, la mente y el espíritu en una misma vibración.</p></div></article><article class="dj-card more-djs-card">
 <div class="more-djs-inner">
 <h3 class="more-djs-title">More DJs coming soon</h3>
 <p class="more-djs-text">
-                Presenta un recorrido progresivo con melodías ascendentes, grooves en evolución constante y una sensibilidad que combina fuerza y profundidad. Su set teje un viaje expansivo que envuelve, eleva y sincroniza a la audiencia con la esencia nocturna del festival.           </p>
+            Pronto anunciaremos más artistas invitados. Mantente atento a nuestras redes para el anuncio del lineup completo.
+          </p>
 </div>
 </article>
 </div>
@@ -193,5 +196,24 @@
       });
     });
   </script>
-</body>
+<script>document.addEventListener("DOMContentLoaded", function () {
+  const lineup = document.querySelector(".lineup-grid");
+  if (!lineup) return;
+
+  lineup.style.scrollBehavior = "smooth";
+
+  let direction = 1;
+  let paused = false;
+
+  lineup.addEventListener("mouseover", () => { paused = true; });
+  lineup.addEventListener("mouseout", () => { paused = false; });
+
+  setInterval(function () {
+    if (paused) return;
+    lineup.scrollLeft += 1.5 * direction;
+    if (lineup.scrollLeft + lineup.clientWidth >= lineup.scrollWidth || lineup.scrollLeft <= 0) {
+      direction *= -1;
+    }
+  }, 30);
+});</script></body>
 </html>

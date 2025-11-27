@@ -169,9 +169,11 @@ header {
 
 /* LINEUP */
 .lineup-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  display: flex;
   gap: 22px;
+  overflow-x: auto;
+  padding: 8px 2px 16px;
+  scroll-snap-type: x mandatory;
 }
 
 .dj-card {
@@ -182,7 +184,9 @@ header {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  min-width: 260px;
 }
+
 
 .dj-card-image-wrapper {
   width: 100%;
