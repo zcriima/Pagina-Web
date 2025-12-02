@@ -293,7 +293,7 @@ header {
 }
 
 /* UBICACIÓN */
-.map-wrapper {
+/*.map-wrapper {
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(255, 42, 42, 0.3);
